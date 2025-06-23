@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 50%, #45b7d1 100%);
+    background: linear-gradient(135deg, #f5f0eb 0%, #d9d2cd 50%, #c98e6a 100%);
     background-size: 400% 400%;
     animation: gradientShift 15s ease infinite;
     min-height: 100vh;
@@ -23,13 +23,13 @@ body {
 
 /* Navegación */
 nav {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border-radius: 20px;
     padding: 15px 0;
     margin-bottom: 30px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 nav ul {
@@ -41,20 +41,21 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    color: white;
+    
     font-weight: 600;
     padding: 12px 25px;
     border-radius: 25px;
     transition: all 0.3s ease;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(92, 64, 51, 0.2);
+    color: #5c4033;
     border: 2px solid transparent;
 }
 
 nav ul li a:hover {
-    background: rgba(255, 107, 107, 0.8);
+   background: #c98e6a;
     border-color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+    color: white;
+    box-shadow: 0 5px 15px rgba(201, 142, 106, 0.5);
 }
 
 /* Container principal */
@@ -82,7 +83,7 @@ header::before {
     left: 0;
     right: 0;
     height: 5px;
-    background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
+    background: linear-gradient(90deg, #9a5d0c, #feca57, #fb8a48, #fffd9f);
     background-size: 300% 100%;
     animation: rainbow 3s linear infinite;
 }
@@ -94,7 +95,7 @@ header::before {
 
 header h1 {
     font-size: 3em;
-    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    background: linear-gradient(45deg, #fff56b, #cd854e);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -127,7 +128,7 @@ header p {
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1);
+    background: linear-gradient(90deg, #fff56b, #cdc54e, #d19e45);
 }
 
 /* Controles */
@@ -173,9 +174,9 @@ header p {
 }
 
 .btn-primary {
-    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+     background:  linear-gradient(45deg, #c98e6a, #8d674a);
     color: white;
-    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+    box-shadow: 0 4px 15px rgba(201, 142, 106, 0.4);
 }
 
 .btn-primary:hover {
@@ -184,31 +185,31 @@ header p {
 }
 
 .btn-secondary {
-    background: linear-gradient(45deg, #95a5a6, #bdc3c7);
-    color: white;
+   background:  linear-gradient(45deg, #c98e6a, #8d674a);
+    color: #3b2f2f;
     box-shadow: 0 4px 15px rgba(149, 165, 166, 0.3);
 }
 
 .btn-info {
-    background: linear-gradient(45deg, #4ecdc4, #44d3cc);
+   background:  linear-gradient(45deg, #c98e6a, #8d674a);
     color: white;
     box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
 }
 
 .btn-success {
-    background: linear-gradient(45deg, #2ecc71, #27ae60);
+    background:  linear-gradient(45deg, #c98e6a, #8d674a);
     color: white;
     box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
 }
 
 .btn-warning {
-    background: linear-gradient(45deg, #f39c12, #e67e22);
+   background:  linear-gradient(45deg, #c98e6a, #8d674a);
     color: white;
     box-shadow: 0 4px 15px rgba(243, 156, 18, 0.3);
 }
 
 .btn-danger {
-    background: linear-gradient(45deg, #e74c3c, #c0392b);
+    background:  linear-gradient(45deg, #c98e6a, #8d674a);
     color: white;
     box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
 }
@@ -225,17 +226,19 @@ header p {
 /* Inputs */
 input, select {
     padding: 12px 20px;
-    border: 2px solid #e0e6ed;
+    
     border-radius: 15px;
     font-size: 14px;
     transition: all 0.3s ease;
-    background: rgba(255, 255, 255, 0.9);
+     background: #f5f0eb;
+    border: 2px solid #d9d2cd;
+    color: #5c4033;
 }
 
 input:focus, select:focus {
     outline: none;
-    border-color: #4ecdc4;
-    box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.2);
+    border-color: #c98e6a;
+    box-shadow: 0 0 0 3px rgba(201, 142, 106, 0.3);
     transform: translateY(-1px);
 }
 
@@ -282,11 +285,11 @@ table {
 }
 
 thead {
-    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    background: linear-gradient(45deg, #c98e6a, #a66c52);
 }
 
 thead th {
-    color: white;
+    color:#fdf8f4;
     padding: 20px 15px;
     text-align: left;
     font-weight: 600;
@@ -324,12 +327,12 @@ tbody td {
 }
 
 .status-available {
-    background: linear-gradient(45deg, #2ecc71, #27ae60);
+    background:  linear-gradient(45deg, #c98e6a, #8d674a);
     color: white;
 }
 
 .status-unavailable {
-    background: linear-gradient(45deg, #e74c3c, #c0392b);
+    background:  linear-gradient(45deg, #c98e6a, #8d674a);
     color: white;
 }
 
@@ -395,7 +398,7 @@ tbody td {
 }
 
 .modal-content {
-    background: white;
+    background: #fffaf5;
     margin: 15% auto;
     padding: 30px;
     border-radius: 20px;
@@ -432,7 +435,7 @@ tbody td {
 
 /* Títulos de secciones */
 h2 {
-    color: #2c3e50;
+    color: #603a0f;
     margin-bottom: 25px;
     font-size: 1.8em;
     position: relative;
@@ -446,7 +449,7 @@ h2::after {
     left: 0;
     width: 50px;
     height: 3px;
-    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+   background: linear-gradient(45deg, #c98e6a, #8d674a);
     border-radius: 2px;
 }
 
@@ -504,30 +507,30 @@ h2::after {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+   background: (45deg, #c98e6a, #8d674a);
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(45deg, #ff5252, #26d0ce);
+    background: linear-gradient(45deg, #a66c52, #5c4033);
 }
 
 .container ul li {
-    background-color: #ffffff;
-    border-left: 5px solid #007BFF;
+    background-color: #f5f0eb; 
+    border-left: 5px solid #c98e6a;
     padding: 1em;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(92, 64, 51, 0.15);
     transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
 .container ul li:hover {
     transform: translateY(-3px);
-    background-color: #e6f0ff;
+    background-color: #f0e4dc;;
 }
 
 .container ul li a {
-    color: #333;
+    color: #5c4033;
     font-size: 1.1em;
     font-weight: bold;
     text-decoration: none;
@@ -535,5 +538,12 @@ h2::after {
 }
 
 .container ul li a:hover {
-    color: #007BFF;
+    color:#c98e6a; 
+}
+.form-section,
+.controls-section,
+.table-section {
+    background: rgba(245, 240, 235, 0.9);
+    border: 1px solid #d9d2cd;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
