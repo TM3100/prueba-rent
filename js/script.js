@@ -141,15 +141,8 @@ class SpaceManager {
             row.innerHTML = `
                 <td>${space.id || 'N/A'}</td>
                 <td>${space.name || 'N/A'}</td>
-                <td>${space.description || 'N/A'}</td>
-                <td>${space.location || 'N/A'}</td>
+                <td>${space.areaInSquareMeters  || '0'}</td>
                 <td>${space.capacity || 'N/A'}</td>
-                <td>$${space.price || '0'}</td>
-                <td>
-                    <span class="status-badge ${space.available ? 'status-available' : 'status-unavailable'}">
-                        ${space.available ? 'Disponible' : 'No disponible'}
-                    </span>
-                </td>
                 <td>
                     <div class="action-buttons">
                         <button class="btn btn-warning btn-small" onclick="spaceManager.editSpace(${space.id})">
@@ -176,11 +169,9 @@ class SpaceManager {
                 spaceData = {
                     id: cells[0].textContent,
                     name: cells[1].textContent,
-                    description: cells[2].textContent,
-                    location: cells[3].textContent,
-                    capacity: cells[4].textContent,
-                    price: cells[5].textContent.replace('$', ''),
-                    available: cells[6].textContent.includes('Disponible')
+                    areaInSquareMeters: cells[2].textContent,
+                    capacity: cells[3].textContent,
+                    
                 };
             }
         });
@@ -199,11 +190,8 @@ class SpaceManager {
     populateForm(space) {
         document.getElementById('spaceId').value = space.id;
         document.getElementById('name').value = space.name;
-        document.getElementById('description').value = space.description;
-        document.getElementById('location').value = space.location;
+        document.getElementById('areaInSquareMeters').value = space.areaInSquareMeters
         document.getElementById('capacity').value = space.capacity;
-        document.getElementById('price').value = space.price;
-        document.getElementById('available').value = space.available.toString();
     }
 
     resetForm() {
@@ -220,11 +208,8 @@ class SpaceManager {
         const formData = new FormData(this.spaceForm);
         const spaceData = {
             name: formData.get('name'),
-            description: formData.get('description'),
-            location: formData.get('location'),
+            areaInSquareMeters: parseFloat(formData.get('areaInSquareMeters')),
             capacity: parseInt(formData.get('capacity')),
-            price: parseFloat(formData.get('price')),
-            available: formData.get('available') === 'true'
         };
 
         try {
